@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace MonopolyProj
 {
-    /// <summary>
-    /// Interaction logic for Field.xaml
-    /// </summary>
     public partial class Field : UserControl
     {
         public Field()

@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace MonopolyProj
 {
-    /// <summary>
-    /// Interaction logic for BigField.xaml
-    /// </summary>
     public partial class BigField : UserControl
     {
         public BigField()

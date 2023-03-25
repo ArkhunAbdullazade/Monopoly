@@ -159,7 +159,6 @@ namespace MonopolyProj
         private PlayerData[] GetPlayerDatas()
         {
             PlayerData[] datas = new PlayerData[] { playerDataRow.Player1Data, playerDataRow.Player2Data };
-            Array.Resize(ref datas, this.game.Players.Count());
             return datas;
         }
 
@@ -184,25 +183,6 @@ namespace MonopolyProj
             {
                 fields[position + extra].fieldColorRectangle.Fill = null;
             }
-            if (this.game.Fields[position].GetType() == typeof(TrainStationField))
-            {
-                fields[position + extra].Train.Visibility = Visibility.Visible;
-            }
-            if (this.game.Fields[position].GetType() == typeof(ChanceField))
-            {
-                fields[position + extra].QuestionMark.Visibility = Visibility.Visible;
-            }
-            if (this.game.Fields[position].GetType() == typeof(CommunityChestField))
-            {
-                fields[position + extra].Chest.Visibility = Visibility.Visible;
-            }
-            if (this.game.Fields[position].GetType() == typeof(SupplierField))
-            {
-                if (this.game.Fields[position].Name == "Water Works")
-                    fields[position + extra].Water.Visibility = Visibility.Visible;
-                else if (this.game.Fields[position].Name == "Energy Company")
-                    fields[position + extra].Bulb.Visibility = Visibility.Visible;
-            }
 
             if (this.game.Fields[position].GetType() == typeof(StreetField) || this.game.Fields[position].GetType() == typeof(TrainStationField)
             || this.game.Fields[position].GetType() == typeof(SupplierField))
@@ -215,43 +195,27 @@ namespace MonopolyProj
         private void SetPlayers(int position, int extra)
         {
             if (this.game.PlayerPosition.Count() >= 1 && this.game.PlayerPosition[this.game.Players[0]] == position)
-            {
                 fields[position + extra].Player1.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                fields[position + extra].Player1.Visibility = Visibility.Hidden;
-            }
+
+            else fields[position + extra].Player1.Visibility = Visibility.Hidden;
 
             if (this.game.PlayerPosition.Count() >= 2 && this.game.PlayerPosition[this.game.Players[1]] == position)
-            {
                 fields[position + extra].Player2.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                fields[position + extra].Player2.Visibility = Visibility.Hidden;
-            }
+
+            else fields[position + extra].Player2.Visibility = Visibility.Hidden;
         }
 
         private void SetPlayersOnBigField(BigField bigField, int position)
         {
             if (this.game.PlayerPosition.Count() >= 1 && this.game.PlayerPosition[this.game.Players[0]] == position)
-            {
                 bigField.Player1.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                bigField.Player1.Visibility = Visibility.Hidden;
-            }
+
+            else bigField.Player1.Visibility = Visibility.Hidden;
 
             if (this.game.PlayerPosition.Count() >= 2 && this.game.PlayerPosition[this.game.Players[1]] == position)
-            {
                 bigField.Player2.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                bigField.Player2.Visibility = Visibility.Hidden;
-            }
+
+            else bigField.Player2.Visibility = Visibility.Hidden;
         }
 
     }

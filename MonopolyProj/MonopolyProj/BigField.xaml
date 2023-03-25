@@ -25,7 +25,7 @@
             <Ellipse x:Name="Player2" Grid.Column="1" Grid.Row="0" Fill="CornflowerBlue" Visibility="Hidden" Stretch="Uniform"/>
 
         </Grid>
-        <Label Grid.Row="0" x:Name="fieldNameLabel" Content="Go To Jail" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Black" FontSize="20"    />
+        <Label Grid.Row="0" x:Name="fieldNameLabel" Content="Go To Jail" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="Black" FontSize="20" FontWeight="DemiBold" />
         <Viewbox Visibility="Hidden"  x:Name="policeMan" Grid.Row="1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Fill">
             <Canvas Width="640" Height="587">
                 <Canvas.Resources/>
