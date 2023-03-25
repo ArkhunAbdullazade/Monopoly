@@ -36,7 +36,7 @@ namespace MonopolyProj.GameClass
 
         public Dictionary<Player, int> TriesToEscapeFromPrison
         {
-            get => triesToEscapeFromPrison; 
+            get { return triesToEscapeFromPrison; } 
             set => triesToEscapeFromPrison = value;
         }
         public IReadOnlyDictionary<Player, List<int[]>> DiceThrows

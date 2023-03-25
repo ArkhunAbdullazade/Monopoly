@@ -1,4 +1,5 @@
-﻿
+﻿using MonopolyProj.Cards;
+using MonopolyProj.GameClass;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,10 +23,25 @@ namespace MonopolyProj
 
     public partial class MainWindow : Window
     {
+        public Menu menu { get; private set; }
+        public MonopolyField monopolyField { get; private set; }
 
         public MainWindow()
         {
             InitializeComponent();
+            menu = new Menu(this);
+            ShowMenu();
+        }
+
+        public void ShowMenu()
+        {
+            contentControl.Content = menu;
+        }
+
+        public void ShowMonopolyField(Game game)
+        {
+            monopolyField = new MonopolyField(game, this);
+            contentControl.Content = monopolyField;
         }
     }
 }

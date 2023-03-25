@@ -18,10 +18,14 @@ namespace MonopolyProj
 {
     public partial class PlayerData : UserControl
     {
+        public Ellipse[] playerHeads;
+        public ObservableCollection<string> PlayerOwnerShip { get; set; } = new ObservableCollection<string>();
+
         public PlayerData()
         {
             InitializeComponent();
             DataContext = this;
+            playerHeads = new Ellipse[] { Player1Head, Player2Head };
         }
 
     }
