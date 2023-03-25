@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Arrow.png" />
+    <None Remove="FreeParking.png" />
+    <None Remove="GoToPrison.png" />
+    <None Remove="LOGO.png" />
+    <None Remove="Prison.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pics\Arrow.png" />
+    <Resource Include="Pics\FreeParking.png" />
+    <Resource Include="Pics\GoToPrison.png" />
+    <Resource Include="Pics\LOGO.png" />
+    <Resource Include="Pics\Prison.png" />
+  </ItemGroup>
+
+</Project>
