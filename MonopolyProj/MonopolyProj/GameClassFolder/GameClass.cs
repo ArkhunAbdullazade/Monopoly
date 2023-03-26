@@ -29,7 +29,7 @@ namespace MonopolyProj.GameClass
         private Dictionary<Player, string> lastCardText = new Dictionary<Player, string>();
         private Queue<Player> playerQueue = new Queue<Player>();
         private IEnumerable<IField> buyableFields;
-        public SoundPlayer bgMusic { get; set; } = new SoundPlayer("bgmusic.wav");
+        public SoundPlayer bgMusic { get; set; } = new SoundPlayer("Music/bgmusic.wav");
         public bool IsPlayingMusic { get; set; } = false;
 
         public bool IsGameOver { get; set; }

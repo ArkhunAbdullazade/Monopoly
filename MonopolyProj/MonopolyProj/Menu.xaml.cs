@@ -45,13 +45,9 @@ namespace MonopolyProj
 
         private void StartButtonClick(object sender, RoutedEventArgs e)
         {
-            if (PlayerNames.Count() <= 1)
+            if (PlayerNames.Count() != 2)
             {
-                MessageBox.Show("You have to add at least 2 Players to start the game");
-            }
-            else if (PlayerNames.Count() > 4)
-            {
-                MessageBox.Show("You can only Play with 4 Players");
+                MessageBox.Show("You have to add 2 Players to start the game");
             }
             else
             {
